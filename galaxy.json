@@ -1,14 +1,14 @@
 {
     "Milky_Way": {
         "name": "Milky Way",
-        "rarity": 50,
+        "rarity": 57,
         "wikipedia": "https://en.wikipedia.org/wiki/Milky_Way",
         "main_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/ESO-VLT-Laser-phot-33a-07.jpg/1920px-ESO-VLT-Laser-phot-33a-07.jpg",
         "wname": "MilkyWay"
     },
     "Andromeda": {
         "name": "Andromeda",
-        "rarity": 50,
+        "rarity": 45,
         "wikipedia": "https://en.wikipedia.org/wiki/Andromeda_Galaxy",
         "main_img": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Andromeda_Galaxy_560mm_FL.jpg",
         "wname": "Andromeda_Galaxy"
