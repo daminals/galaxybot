@@ -31,6 +31,7 @@ class GALAXY_OBJECT:
         #display.set_author(name="galaxybot", icon_url=self.img)
         display.set_image(url=self.img)
         display.add_field(name="User", value=user, inline=False)
+        display.add_field(name="Rarity", value=self.rarity, inline=False)
         display.add_field(name="Points", value=self.points, inline=False)
         return display
 
@@ -71,6 +72,15 @@ async def points(ctx, individual: discord.Member=None):
 @bot.command() # show off charms
 async def charms(ctx, individual: discord.Member=None):
     await leaderboard(ctx, individual, "charms")
+
+@bot.command()
+async def shop(ctx):
+    embed = discord.Embed(title="Shop", description="Galaxy Shop. Use >buy item_name to purchase items with your points!", colour=0x87CEEB)
+    embed.add_field(name="Basic Charm", value="500 points, makes rarer galaxies appear more frequently for you!", inline=False)
+    embed.add_field(name="Super Charm", value="2000 points, 5 times more effective than basic charm!", inline=False)
+    embed.add_field(name="Galatic Charm", value="5000 points, 3 times more effective than the Super Charm!", inline=False)
+    await ctx.send(embed=embed)
+
 
 @bot.command()
 async def galaxy(ctx):

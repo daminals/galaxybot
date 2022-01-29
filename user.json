@@ -1,10 +1,12 @@
 {
     "233032375787847682": {
         "charms": 0,
-        "points": 0
+        "points": 0,
+        "discovered": []
     },
     "577668867380477962": {
         "charms": 0,
-        "points": 129
+        "points": 129,
+        "discovered": []
     }
 }
