@@ -19,7 +19,7 @@ class GALAXY_OBJECT:
         self.rarity = gdict["rarity"]
         self.wikipedia = gdict["wikipedia"]
         self.wname = gdict['wname']
-        self.points = (1/self.rarity) * 100
+        self.points = (1/self.rarity) * 1000
         self.img = gdict["main_img"]
 
         for i in range(self.rarity):
@@ -29,10 +29,12 @@ class GALAXY_OBJECT:
         summary = summary.split("\n")[0]
         return summary
 
-    def embed(self):
+    def embed(self, user):
         display = discord.Embed(title=self.name, description=self.shorten(wikipedia.summary(self.wname)), colour=0x87CEEB)
         #display.set_author(name="galaxybot", icon_url=self.img)
         display.set_image(url=self.img)
+        display.add_field(name="User", value=user, inline=False)
+        display.add_field(name="Points", value=self.points, inline=False)
         return display
 
 with open('galaxy.json') as galaxyjson:
@@ -52,7 +54,7 @@ async def ping(ctx):
 @bot.command()
 async def galaxy(ctx):
     chosen = random.choice(g_rarity)
-    await ctx.send(embed=chosen.embed())
+    await ctx.send(embed=chosen.embed(ctx.author))
     #print(g_rarity)
     
 
