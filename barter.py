@@ -4,14 +4,33 @@
 
 import json
 
+shop = {
+    "basic": [500, 1],
+    "super": [2000, 5],
+    "galactic": [5000, 15]
+}
+
 def add_points(user, points):
     point_json = readJSON('user.json')
     if user in point_json:
         point_json[user]["points"] = int(point_json[user]["points"]) + int(points)
     else:
         point_json[user]["points"] = points
+        point_json[user]["charms"] = 0
         #print(point_json)
     writeJSON('user.json', point_json)
+
+def add_charm(user, charm):
+    charm_json = readJSON('user.json')
+    if user not in charm_json:
+        return "Play >galaxy first!"
+    points = charm_json[user]["points"]
+    if shop[charm][0] > points:
+        return "Not enough points"
+    charm_json[user]["charms"] = int(charm_json[user]["charms"]) + int(shop[charm][1])
+    charm_json[user]["points"] = int(charm_json[user]["points"]) - int(shop[charm][0])
+    writeJSON('user.json', charm_json)
+    return "Success!"
 
 def writeJSON(filename, data):
     with open(filename, 'w') as outfile:

@@ -16,6 +16,7 @@ bot = commands.Bot(command_prefix=">", intents=intents)
 class GALAXY_OBJECT:
     def __init__(self, gdict):
         self.name = gdict["name"]
+        self.stable_rarity = gdict["rarity"]
         self.rarity = gdict["rarity"]
         self.wikipedia = gdict["wikipedia"]
         self.wname = gdict['wname']
@@ -31,7 +32,7 @@ class GALAXY_OBJECT:
         #display.set_author(name="galaxybot", icon_url=self.img)
         display.set_image(url=self.img)
         display.add_field(name="User", value=user, inline=False)
-        display.add_field(name="Rarity", value=self.rarity, inline=False)
+        display.add_field(name="Rarity", value=self.stable_rarity, inline=False)
         display.add_field(name="Points", value=self.points, inline=False)
         return display
 
@@ -75,25 +76,31 @@ async def charms(ctx, individual: discord.Member=None):
 
 @bot.command()
 async def shop(ctx):
-    embed = discord.Embed(title="Shop", description="Galaxy Shop. Use >buy item_name to purchase items with your points!", colour=0x87CEEB)
+    embed = discord.Embed(title="Shop", description="Galaxy Shop. Use >buy item_name to purchase items with your points! Enter 'basic', 'super', or 'galatic' to purchase your charm!", colour=0x87CEEB)
     embed.add_field(name="Basic Charm", value="500 points, makes rarer galaxies appear more frequently for you!", inline=False)
     embed.add_field(name="Super Charm", value="2000 points, 5 times more effective than basic charm!", inline=False)
     embed.add_field(name="Galatic Charm", value="5000 points, 3 times more effective than the Super Charm!", inline=False)
     await ctx.send(embed=embed)
 
+@bot.command()
+async def buy(ctx, charm):
+    if charm.lower() in barter.shop:
+        await ctx.send(barter.add_charm(str(ctx.author.id), charm))
+    else:
+        await ctx.send("that charm doesn't seem to be in the shop.")
 
 @bot.command()
 async def galaxy(ctx):
     # initialize
     g_rarity = []
-    charm = barter.readJSON("user.json")[str(ctx.author.id)]["charm"]
+    charm = barter.readJSON("user.json")[str(ctx.author.id)]["charms"]
     # create a weighted list of galaxies
     for i in galaxies:
         galaxy_obj = GALAXY_OBJECT(galaxies[i])
         if galaxy_obj.rarity < 30:
-            galaxy_obj.rarity -= charm
-        else:
             galaxy_obj.rarity += charm
+        else:
+            galaxy_obj.rarity -= charm
         for i in range(galaxy_obj.rarity):
             g_rarity.append(galaxy_obj)
     # randomly choose from generated list
