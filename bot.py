@@ -20,16 +20,10 @@ class GALAXY_OBJECT:
         self.wikipedia = gdict["wikipedia"]
         self.wname = gdict['wname']
         self.points = (1/self.rarity) * 100
-        self.img = self.get_img()        
+        self.img = gdict["main_img"]
 
         for i in range(self.rarity):
             g_rarity.append(self)
-
-    def get_img(self):
-        wiki = wikipedia.page(self.wname)
-        img_link = wiki.images[1]
-        print(img_link)
-        return img_link
 
     def shorten(self, summary):
         summary = summary.split("\n")[0]
