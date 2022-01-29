@@ -4,6 +4,7 @@
 
 import discord, os, json, random, requests
 import wikipedia
+import barter
 from dotenv import load_dotenv
 load_dotenv()
 TOKEN = os.environ.get('TOKEN', 3)
@@ -11,7 +12,6 @@ TOKEN = os.environ.get('TOKEN', 3)
 from discord.ext import commands
 bot = commands.Bot(command_prefix=">")
 g_rarity = []    
-
 
 class GALAXY_OBJECT:
     def __init__(self, gdict):
@@ -37,7 +37,7 @@ class GALAXY_OBJECT:
         display.add_field(name="Points", value=self.points, inline=False)
         return display
 
-with open('galaxy.json') as galaxyjson:
+with open('galaxy.json', 'r+') as galaxyjson:
     galaxies = json.load(galaxyjson)
 
 for i in galaxies:
@@ -55,6 +55,7 @@ async def ping(ctx):
 async def galaxy(ctx):
     chosen = random.choice(g_rarity)
     await ctx.send(embed=chosen.embed(ctx.author))
+    barter.add_points(str(ctx.author.id), chosen.points)
     #print(g_rarity)
     
 
