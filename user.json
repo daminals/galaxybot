@@ -5,12 +5,34 @@
         "points": 0
     },
     "577668867380477962": {
-        "charms": 22,
+        "charms": 10,
         "discovered": [
             "Wolf-Lundmark-Melotte",
             "Cigar",
-            "Andromeda"
+            "Andromeda",
+            "Eye of Sauron",
+            "Comet",
+            "Coma Pinwheel",
+            "Fireworks",
+            "Bode's",
+            "Black Eye",
+            "Milky Way",
+            "Southern Pinwheel",
+            "Needle",
+            "Butterfly",
+            "Sunflower",
+            "Hockey Stick",
+            "Circinus",
+            "Whirlpool",
+            "Mayall's Object",
+            "Triangulum",
+            "Cosmos Redshift 7",
+            "Cartwheel",
+            "Antennae",
+            "Hoag's Object",
+            "Medusa Merger",
+            "Pinwheel"
         ],
-        "points": 2120
+        "points": 14670
     }
 }

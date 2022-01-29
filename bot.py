@@ -90,10 +90,27 @@ async def buy(ctx, charm):
         await ctx.send("that charm doesn't seem to be in the shop.")
 
 @bot.command()
+async def missing(ctx):
+    all = barter.readJSON('galaxy.json')
+    user_disc = []
+    missing = []
+    missing_string = '```'
+    for i in barter.readJSON('user.json')[str(ctx.author.id)]['discovered']:
+        user_disc.append(i)
+    for i in all:
+        if all[i]['name'] not in user_disc:
+            missing.append(all[i]['name'])
+            missing_string += all[i]['name'] +'\n'
+    await ctx.send(missing_string + '```')
+
+
+
+@bot.command()
 async def galaxy(ctx):
     # initialize
     g_rarity = []
-    charm = barter.readJSON("user.json")[str(ctx.author.id)]["charms"]
+    data = barter.readJSON("user.json")[str(ctx.author.id)]
+    charm = data["charms"]
     # create a weighted list of galaxies
     for i in galaxies:
         galaxy_obj = GALAXY_OBJECT(galaxies[i])
@@ -107,6 +124,9 @@ async def galaxy(ctx):
     chosen = random.choice(g_rarity)
     await ctx.send(embed=chosen.embed(ctx.author))
     barter.add_points(str(ctx.author.id), chosen.points, chosen.name)
+    data = barter.readJSON("user.json")[str(ctx.author.id)]
+    if len(data['discovered']) >= 25:
+        await ctx.send("Congrats! You have discovered every galaxy!", file=discord.File('winner.png'))
     
 
 bot.run(TOKEN)
