@@ -2,16 +2,22 @@
 # Daniel Kogan Taseen Islam Aritro Sarkar
 # 01.28.2022
 
-import discord
+import discord, os
+from dotenv import load_dotenv
+load_dotenv()
+TOKEN = os.environ.get('TOKEN', 3)
 
 bot = discord.Bot()
+from discord.ext import commands
 
 @bot.event
 async def on_ready():
     print(f"We have logged in as {bot.user}")
 
-@bot.slash_command()
-async def hello(ctx):
-    await ctx.respond("Hello!")
+bot = commands.Bot(command_prefix=">")
 
-bot.run("your token here")
+@bot.command()
+async def ping(ctx):
+    await ctx.send("pong")
+
+bot.run(TOKEN)
