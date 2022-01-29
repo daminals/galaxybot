@@ -7,8 +7,7 @@ A user will gain points each time they use this command and call on galaxybot. T
 
 But what do you do with points? You exchange them at the galaxy shop! You can buy various items such as the basic charm, super charm, and galactic charm. The basic charm (costing 500 pts) helps rare galaxies to show up more frequently, the super charm (2000 pts) has 5x this effect, and the galactic charm (5000 pts) has 3x the effect of a super charm!
 
-Discover the galaxies of the universe from your fingertips and try to collect them all. Users who find every galaxy will earn a special badge, kind of like the pokedex but for galaxies.
+Discover the galaxies of the universe from your fingertips and try to find them all. Users who find every galaxy will earn a special badge, kind of like the pokedex but for galaxies.
 
 Gotta discover them all!
 
-Drive past solar system from your snowed-in shelter
