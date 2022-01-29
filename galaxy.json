@@ -1,9 +1,10 @@
 {
     "Andromeda": {
         "name": "Andromeda",
-        "rarity": 1,
-        "wikipedia": "https://en.wikipedia.org/wiki/Andromeda_Galaxy"
-        },
+        "rarity": 50,
+        "wikipedia": "https://en.wikipedia.org/wiki/Andromeda_Galaxy",
+        "wname": "Andromeda_Galaxy"
+        }
     
 
 }
