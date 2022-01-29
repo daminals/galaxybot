@@ -1,18 +1,187 @@
 {
-    "Milky_Way": {
+    "Milky_Way_Galaxy": {
         "name": "Milky Way",
-        "rarity": 57,
+        "rarity": 100,
         "wikipedia": "https://en.wikipedia.org/wiki/Milky_Way",
         "main_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/ESO-VLT-Laser-phot-33a-07.jpg/1920px-ESO-VLT-Laser-phot-33a-07.jpg",
-        "wname": "MilkyWay"
-    },
-    "Andromeda": {
+        "wname": "Milky_Way_Galaxy"
+        },
+    "Andromeda_Galaxy": {
         "name": "Andromeda",
-        "rarity": 45,
+        "rarity": 95,
         "wikipedia": "https://en.wikipedia.org/wiki/Andromeda_Galaxy",
         "main_img": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Andromeda_Galaxy_560mm_FL.jpg",
         "wname": "Andromeda_Galaxy"
-        }
+        },
+    "Antennae_Galaxies": {
+        "name": "Antennae",
+        "rarity": 22,
+        "wikipedia": "https://en.wikipedia.org/wiki/Antennae_Galaxies",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/3/30/Antennae_Galaxies_reloaded.jpg",
+        "wname": "Antennae_Galaxies"
+        },
+    "Backward_Galaxy": {
+        "name": "Backward",
+        "rarity": 34,
+        "wikipedia": "https://en.wikipedia.org/wiki/NGC_4622",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/8/8c/NGC_4622HSTFull.jpg",
+        "wname": "Backward_Galaxy"
+        },
+    "Black_Eye_Galaxy": {
+        "name": "Black Eye",
+        "rarity": 40,
+        "wikipedia": "https://en.wikipedia.org/wiki/Black_Eye_Galaxy",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/e/e8/NGC_4826_-_HST.png",
+        "wname": "Black_Eye_Galaxy"
+        },
+    "Bode's_Galaxy": {
+        "name": "Bode's",
+        "rarity": 88,
+        "wikipedia": "https://en.wikipedia.org/wiki/Messier_81",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/6/63/Messier_81_HST.jpg",
+        "wname": "Bode's_Galaxy"
+        },
+    "Butterfly_Galaxies": {
+        "name": "Butterfly",
+        "rarity": 9,
+        "wikipedia": "https://en.wikipedia.org/wiki/Butterfly_Galaxies",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/4/41/NGC_4567_%26_4568.png",
+        "wname": "Butterfly_Galaxies"
+        },
+    "Cartwheel_Galaxy": {
+        "name": "Cartwheel",
+        "rarity": 19,
+        "wikipedia": "https://en.wikipedia.org/wiki/Cartwheel_Galaxy",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/2/26/Cartwheel_Galaxy.jpg",
+        "wname": "Cartwheel_Galaxy"
+        },
+    "Cigar_Galaxy": {
+        "name": "Cigar",
+        "rarity": 72,
+        "wikipedia": "https://en.wikipedia.org/wiki/Messier_82",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/c/ce/M82_HST_ACS_2006-14-a-large_web.jpg",
+        "wname": "Cigar_Galaxy"
+        },
+    "Circinus_Galaxy": {
+        "name": "Circinus",
+        "rarity": 90,
+        "wikipedia": "https://en.wikipedia.org/wiki/Circinus_Galaxy",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/6/64/142_circinus_galaxy.png",
+        "wname": "Circinus_Galaxy"
+        },
+    "Coma_Pinwheel_Galaxy": {
+        "name": "Coma Pinwheel",
+        "rarity": 78,
+        "wikipedia": "https://en.wikipedia.org/wiki/Messier_99",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/b/b7/M99_LeoShatz_cropped1024.jpg",
+        "wname": "Coma_Pinwheel_Galaxy"
+        },
+    "Comet_Galaxy": {
+        "name": "Comet",
+        "rarity": 83,
+        "wikipedia": "https://en.wikipedia.org/wiki/Comet_Galaxy",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/0/0f/CometGalaxy.jpg",
+        "wname": "Comet_Galaxy"
+        },
+    "Cosmos_Redshift_7": {
+        "name": "Cosmos Redshift 7",
+        "rarity": 1,
+        "wikipedia": "https://en.wikipedia.org/wiki/Cosmos_Redshift_7",
+        "main_img": "https://cdn.discordapp.com/attachments/936847307725500419/937104117007015997/Eso1524aArtistE28099s_impression_of_CR7_the_brightest_galaxy_in_the_early_Universe.jpg",
+        "wname": "Cosmos_Redshift_7"
+        },
+    "Eye_of_Sauron": {
+        "name": "Eye of Sauron",
+        "rarity": 82,
+        "wikipedia": "https://en.wikipedia.org/wiki/NGC_4151",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/e/eb/NGC4151_Galaxy_from_the_Mount_Lemmon_SkyCenter_Schulman_Telescope_courtesy_Adam_Block.jpg",
+        "wname": "Eye_of_Sauron"
+        },
+    "Fireworks_Galaxy": {
+        "name": "Fireworks",
+        "rarity": 2,
+        "wikipedia": "https://en.wikipedia.org/wiki/NGC_6946",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/4/40/NGC_6946.jpg",
+        "wname": "Fireworks_Galaxy"
+        },
+    "Hockey_Stick_Galaxies": {
+        "name": "Hockey Stick",
+        "rarity": 85,
+        "wikipedia": "https://en.wikipedia.org/wiki/NGC_4656_and_NGC_4657",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/7/73/Hockeystick.jpg",
+        "wname": "Hockey_Stick_Galaxies"
+        },
+    "Hoag's_Object": {
+        "name": "Hoag's Object",
+        "rarity": 4,
+        "wikipedia": "https://en.wikipedia.org/wiki/Hoag%27s_Object",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/d/da/Hoag%27s_object.jpg",
+        "wname": "Hoag's_Object"
+        },
+    "Medusa_Merger": {
+        "name": "Medusa Merger",
+        "rarity": 5,
+        "wikipedia": "https://en.wikipedia.org/wiki/NGC_4194",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/d/db/Snakes_and_Stones_NGC_4194.jpg",
+        "wname": "Medusa_Merger"
+        },
+    "Mayall's_Object": {
+        "name": "Mayall's Object",
+        "rarity": 6,
+        "wikipedia": "https://en.wikipedia.org/wiki/Mayall%27s_Object",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Hubble_Interacting_Galaxy_Arp_148_%282008-04-24%29.jpg",
+        "wname": "Mayall's_Merger"
+        },
+    "Needle_Galaxy": {
+        "name": "Needle",
+        "rarity": 40,
+        "wikipedia": "https://en.wikipedia.org/wiki/Needle_Galaxy",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Needle_Galaxy_4565.jpeg",
+        "wname": "Needle_Galaxy"
+        },
+    "Wolf-Lundmark-Melotte": {
+        "name": "Wolf-Lundmark-Melotte",
+        "rarity": 20,
+        "wikipedia": "https://en.wikipedia.org/wiki/Wolf-Lundmark-Melotte",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/0/01/The_WLM_galaxy_on_the_edge_of_the_Local_Group.jpg",
+        "wname": "Wolf-Lundmark-Melotte"
+        },
+    "Pinwheel_Galaxy": {
+        "name": "Pinwheel",
+        "rarity": 60,
+        "wikipedia": "https://en.wikipedia.org/wiki/Pinwheel_Galaxy",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/c/c5/M101_hires_STScI-PRC2006-10a.jpg",
+        "wname": "Pinwheel_Galaxy"
+        },
+    "Southern_Pinwheel_Galaxy": {
+        "name": "Southern Pinwheel",
+        "rarity": 10,
+        "wikipedia": "https://en.wikipedia.org/wiki/Southern_Pinwheel_Galaxy",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Hubble_view_of_barred_spiral_galaxy_Messier_83.jpg",
+        "wname": "Southern_Pinwheel_Galaxy"
+        },
+    "Sunflower_Galaxy": {
+        "name": "Sunflower",
+        "rarity": 8,
+        "wikipedia": "https://en.wikipedia.org/wiki/Sunflower_Galaxy",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/b/b4/M63_%28NGC_5055%29.jpg",
+        "wname": "Sunflower_Galaxy"
+        },
+    "Triangulum_Galaxy": {
+        "name": "Triangulum",
+        "rarity": 15,
+        "wikipedia": "https://en.wikipedia.org/wiki/Triangulum_Galaxy",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/6/64/VST_snaps_a_very_detailed_view_of_the_Triangulum_Galaxy.jpg",
+        "wname": "Triangulum_Galaxy"
+        },
+    "Whirlpool_Galaxy": {
+        "name": "Whirlpool",
+        "rarity": 3,
+        "wikipedia": "https://en.wikipedia.org/wiki/Whirlpool_Galaxy",
+        "main_img": "https://upload.wikimedia.org/wikipedia/commons/d/db/Messier51_sRGB.jpg",
+        "wname": "Whirlpool_Galaxy"
+        },
+    }
     
 
 }
