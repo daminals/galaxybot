@@ -19,7 +19,7 @@ class GALAXY_OBJECT:
         self.rarity = gdict["rarity"]
         self.wikipedia = gdict["wikipedia"]
         self.wname = gdict['wname']
-        self.points = (1/self.rarity) * 1000
+        self.points = int((1/self.rarity) * 1000)
         self.img = gdict["main_img"]
 
         for i in range(self.rarity):
@@ -46,10 +46,6 @@ for i in galaxies:
 @bot.event
 async def on_ready():
     print(f"We have logged in as {bot.user}")
-
-@bot.command()
-async def ping(ctx):
-    await ctx.send("pong")
 
 @bot.command()
 async def galaxy(ctx):
