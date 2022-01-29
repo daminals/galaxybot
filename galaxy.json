@@ -1,14 +1,14 @@
 {
     "Milky_Way_Galaxy": {
         "name": "Milky Way",
-        "rarity": 100,
+        "rarity": 59,
         "wikipedia": "https://en.wikipedia.org/wiki/Milky_Way",
         "main_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/ESO-VLT-Laser-phot-33a-07.jpg/1920px-ESO-VLT-Laser-phot-33a-07.jpg",
         "wname": "Milky_Way_Galaxy"
         },
     "Andromeda_Galaxy": {
         "name": "Andromeda",
-        "rarity": 95,
+        "rarity": 47,
         "wikipedia": "https://en.wikipedia.org/wiki/Andromeda_Galaxy",
         "main_img": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Andromeda_Galaxy_560mm_FL.jpg",
         "wname": "Andromeda_Galaxy"
@@ -19,13 +19,6 @@
         "wikipedia": "https://en.wikipedia.org/wiki/Antennae_Galaxies",
         "main_img": "https://upload.wikimedia.org/wikipedia/commons/3/30/Antennae_Galaxies_reloaded.jpg",
         "wname": "Antennae_Galaxies"
-        },
-    "Backward_Galaxy": {
-        "name": "Backward",
-        "rarity": 34,
-        "wikipedia": "https://en.wikipedia.org/wiki/NGC_4622",
-        "main_img": "https://upload.wikimedia.org/wikipedia/commons/8/8c/NGC_4622HSTFull.jpg",
-        "wname": "Backward_Galaxy"
         },
     "Black_Eye_Galaxy": {
         "name": "Black Eye",
@@ -38,7 +31,7 @@
         "name": "Bode's",
         "rarity": 88,
         "wikipedia": "https://en.wikipedia.org/wiki/Messier_81",
-        "main_img": "https://upload.wikimedia.org/wikipedia/commons/6/63/Messier_81_HST.jpg",
+        "main_img": "https://cdn.discordapp.com/attachments/937070588651008020/937116658105987134/Screen_Shot_2022-01-29_at_5.46.57_PM.png",
         "wname": "Bode's_Galaxy"
         },
     "Butterfly_Galaxies": {

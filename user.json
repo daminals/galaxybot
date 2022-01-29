@@ -6,7 +6,11 @@
     },
     "577668867380477962": {
         "charms": 22,
-        "discovered": [],
-        "points": 1583
+        "discovered": [
+            "Wolf-Lundmark-Melotte",
+            "Cigar",
+            "Andromeda"
+        ],
+        "points": 2120
     }
 }

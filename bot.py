@@ -97,7 +97,7 @@ async def galaxy(ctx):
     # create a weighted list of galaxies
     for i in galaxies:
         galaxy_obj = GALAXY_OBJECT(galaxies[i])
-        if galaxy_obj.rarity < 30:
+        if galaxy_obj.rarity < 44:
             galaxy_obj.rarity += charm
         else:
             galaxy_obj.rarity -= charm
@@ -106,7 +106,7 @@ async def galaxy(ctx):
     # randomly choose from generated list
     chosen = random.choice(g_rarity)
     await ctx.send(embed=chosen.embed(ctx.author))
-    barter.add_points(str(ctx.author.id), chosen.points)
+    barter.add_points(str(ctx.author.id), chosen.points, chosen.name)
     
 
 bot.run(TOKEN)
