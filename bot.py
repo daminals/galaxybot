@@ -37,7 +37,7 @@ class GALAXY_OBJECT:
 with open('galaxy.json', 'r+') as galaxyjson:
     galaxies = json.load(galaxyjson)
 
-async def leader(ctx, individual, datapoint): # leaderboard function for any desired datapoint
+async def leaderboard(ctx, individual, datapoint): # leaderboard function for any desired datapoint
     leaderboard = "```"
     data = barter.readJSON("user.json")
     if individual:
@@ -66,11 +66,11 @@ async def on_ready():
 
 @bot.command() # show off points
 async def points(ctx, individual: discord.Member=None):
-    await leader(ctx, individual, "points")
+    await leaderboard(ctx, individual, "points")
 
 @bot.command() # show off charms
 async def charms(ctx, individual: discord.Member=None):
-    await leader(ctx, individual, "charms")
+    await leaderboard(ctx, individual, "charms")
 
 @bot.command()
 async def galaxy(ctx):
