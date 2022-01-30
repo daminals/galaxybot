@@ -61,6 +61,8 @@ async def leaderboard(ctx, individual, datapoint): # leaderboard function for an
     for i in leaderboard_no_format:
         leaderboard += i[1]
     ud = await ctx.send(leaderboard + '```')
+    #for i in range(10000000)
+    #await ud.edit(content=)
 
 @bot.event
 async def on_ready():
@@ -104,13 +106,16 @@ async def missing(ctx):
     await ctx.send(missing_string + '```')
 
 
-
 @bot.command()
 async def galaxy(ctx):
     # initialize
     g_rarity = []
-    data = barter.readJSON("user.json")[str(ctx.author.id)]
-    charm = data["charms"]
+    charm = 0
+    try:
+        data = barter.readJSON("user.json")[str(ctx.author.id)]
+        charm = data["charms"]
+    except:
+        print('new user')
     # create a weighted list of galaxies
     for i in galaxies:
         galaxy_obj = GALAXY_OBJECT(galaxies[i])
@@ -124,9 +129,12 @@ async def galaxy(ctx):
     chosen = random.choice(g_rarity)
     await ctx.send(embed=chosen.embed(ctx.author))
     barter.add_points(str(ctx.author.id), chosen.points, chosen.name)
-    data = barter.readJSON("user.json")[str(ctx.author.id)]
-    if len(data['discovered']) >= 25:
-        await ctx.send("Congrats! You have discovered every galaxy!", file=discord.File('winner.png'))
+    try:
+        data = barter.readJSON("user.json")[str(ctx.author.id)]
+        if len(data['discovered']) >= 25:
+            await ctx.send("Congrats! You have discovered every galaxy!", file=discord.File('winner.png'))
+    except:
+        print('new user')
     
 
 bot.run(TOKEN)

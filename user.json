@@ -7,11 +7,6 @@
     "577668867380477962": {
         "charms": 10,
         "discovered": [
-            "Wolf-Lundmark-Melotte",
-            "Cigar",
-            "Andromeda",
-            "Eye of Sauron",
-            "Comet",
             "Coma Pinwheel",
             "Fireworks",
             "Bode's",
@@ -31,8 +26,9 @@
             "Antennae",
             "Hoag's Object",
             "Medusa Merger",
-            "Pinwheel"
+            "Pinwheel",
+            "Eye of Sauron"
         ],
-        "points": 14670
+        "points": 16704
     }
 }

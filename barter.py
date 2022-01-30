@@ -14,13 +14,15 @@ def add_points(user, points, galaxy):
     point_json = readJSON('user.json')
     if user in point_json:
         point_json[user]["points"] = int(point_json[user]["points"]) + int(points)
+        if galaxy not in point_json[user]['discovered']:
+            point_json[user]['discovered'].append(galaxy)
+
     else:
         point_json[user]["points"] = points
         point_json[user]["charms"] = 0
         point_json[user]["discovered"] = []
-        #print(point_json)
-    if galaxy not in point_json[user]['discovered']:
         point_json[user]['discovered'].append(galaxy)
+        #print(point_json)
     writeJSON('user.json', point_json)
 
 def add_charm(user, charm):
