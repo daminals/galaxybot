@@ -3,6 +3,7 @@
 # 01.28.2022
 
 import discord, os, json, random, requests
+import asyncio
 intents = discord.Intents.all()
 import wikipedia
 import barter
@@ -53,7 +54,7 @@ async def leaderboard(ctx, individual, datapoint): # leaderboard function for an
         discord_user = bot.get_user(int(user))
         if discord_user in server.members:
             count = data[user][datapoint]
-            lname = str(discord_user.name) + '#' + str(discord_user.discriminator) + ':' + str(count) + '\n'
+            lname = str(discord_user.name) + '#' + str(discord_user.discriminator) + ': ' + str(count) + '\n'
             leaderboard_no_format.append([count, lname])
     leaderboard_no_format = sorted(leaderboard_no_format)
     leaderboard_no_format = leaderboard_no_format[::-1]
@@ -61,8 +62,21 @@ async def leaderboard(ctx, individual, datapoint): # leaderboard function for an
     for i in leaderboard_no_format:
         leaderboard += i[1]
     ud = await ctx.send(leaderboard + '```')
-    #for i in range(10000000)
-    #await ud.edit(content=)
+    """
+    message = ud.content
+    start = 1
+    for i in range(10000000):
+        message = message.split('\n')
+        start *= 2
+        for index, i in enumerate(message):
+            if 'maccabee' in i:
+                j = i.split(' ')
+                j[1] = " " + str(int(j[1]) + start)
+                message[index] = "".join(j)
+        message = "\n".join(message)
+        await ud.edit(content=message)
+        await asyncio.sleep(1)
+    """
 
 @bot.event
 async def on_ready():
@@ -121,8 +135,6 @@ async def galaxy(ctx):
         galaxy_obj = GALAXY_OBJECT(galaxies[i])
         if galaxy_obj.rarity < 44:
             galaxy_obj.rarity += charm
-        else:
-            galaxy_obj.rarity -= charm
         for i in range(galaxy_obj.rarity):
             g_rarity.append(galaxy_obj)
     # randomly choose from generated list
