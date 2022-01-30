@@ -16,8 +16,8 @@ def add_points(user, points, galaxy):
         point_json[user]["points"] = int(point_json[user]["points"]) + int(points)
         if galaxy not in point_json[user]['discovered']:
             point_json[user]['discovered'].append(galaxy)
-
     else:
+        point_json[user] = {}
         point_json[user]["points"] = points
         point_json[user]["charms"] = 0
         point_json[user]["discovered"] = []
